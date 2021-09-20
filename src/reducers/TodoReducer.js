@@ -26,10 +26,17 @@ const TodoReducer = (state, action) => {
 
       return newArray;
     }
-    case UPDATE_TODO:
-      return state.map((item) =>
+    case UPDATE_TODO: {
+      let newArray = state.map((item) =>
         item.id === action.payload.id ? action.payload : item,
       );
+
+      newArray.sort((a, b) => {
+        return new Date(a.dueDate) - new Date(b.dueDate);
+      });
+
+      return newArray;
+    }
     case DELETE_TODO:
       return state.filter((item) => item.id !== action.payload);
     case DELETE_ALL_TODOS:
