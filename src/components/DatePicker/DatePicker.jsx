@@ -4,7 +4,6 @@ import InputGroup from 'components/common/InputGroup/InputGroup';
 import { CalendarIcon } from 'components/common/Icons/Icons';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
-// import Portal from 'components/common/Portal/Portal';
 import { formatDate } from 'utils/formatDate';
 import './DatePicker.scss';
 
@@ -16,6 +15,7 @@ const DatePicker = forwardRef((props, ref) => {
 
   const handleDateChange = (e) => {
     setDate(e);
+    setIsShowDatePicker(false);
 
     if (onChange) {
       return onChange(e);
