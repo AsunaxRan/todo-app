@@ -13,7 +13,7 @@ import './TodoForm.scss';
 
 const TodoForm = (props) => {
   const { context, defaultValues } = props;
-  const { id, title, description, dueDate, priority } = defaultValues;
+  const { id, title, description, dueDate, priority, checked } = defaultValues;
   const { dispatch } = useContext(TodoContext);
   const [submittedData, setSubmittedData] = useState({});
   const isUpdateContext = context === 'update';
@@ -28,7 +28,7 @@ const TodoForm = (props) => {
 
   const onSubmit = (data) => {
     if (isUpdateContext) {
-      dispatch(updateTodo({ ...data, id }));
+      dispatch(updateTodo({ ...data, checked, inViewMode: false, id }));
     } else {
       dispatch(addTodo(data));
     }
@@ -118,6 +118,8 @@ TodoForm.defaultProps = {
     description: '',
     priority: 'Normal',
     dueDate: new Date(),
+    checked: false,
+    inViewMode: false,
   },
 };
 

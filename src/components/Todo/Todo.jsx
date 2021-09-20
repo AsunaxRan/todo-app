@@ -48,6 +48,8 @@ const Todo = (props) => {
               description,
               priority,
               dueDate,
+              checked,
+              inViewMode,
             }}
           />
         </div>
