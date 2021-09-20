@@ -1,0 +1,50 @@
+$color-black: #000;
+$color-white: #fff;
+$color-gray: #bdbdbd;
+$color-gray-light: #e0e0e0;
+$color-blue: #2196f3;
+$color-green: #5cb85c;
+$color-teal: #00bcd4;
+$color-red: #d9534f;
+$color-dark: #333;
+
+$colors: (
+  'color-black': $color-black,
+  'color-white': $color-white,
+  'color-gray': $color-gray,
+  'color-gray-light': $color-gray-light,
+  'color-blue': $color-blue,
+  'color-green': $color-green,
+  'color-teal': $color-teal,
+  'color-red': $color-red,
+  'color-dark': $color-dark,
+);
+
+$theme-colors: (
+  'primary': $color-blue,
+  'success': $color-green,
+  'info': $color-teal,
+  'danger': $color-red,
+);
+
+$font-primary: 'Source Sans Pro', sans-serif;
+$font-secondary: 'Arimo', sans-serif;
+
+$font-size-base: 14px;
+
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+
+$line-height-base: 1.5;
+
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer / 4,
+  2: $spacer / 2,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+);
+
+$zindex-backdrop: 1000;

@@ -1,0 +1,53 @@
+@import 'styles/variables.scss';
+
+.fw-normal {
+  font-weight: $font-weight-normal !important;
+}
+
+.fw-bold {
+  font-weight: $font-weight-bold !important;
+}
+
+.fs-sm {
+  font-size: 0.85em !important;
+}
+
+.w-100 {
+  width: 100% !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.lead {
+  font-size: 1.25em;
+}
+
+.me-auto {
+  margin-right: auto !important;
+}
+
+@each $variant, $value in $theme-colors {
+  .text-#{$variant} {
+    color: #{$value} !important;
+  }
+}
+
+@each $unit, $value in $spacers {
+  .mt-#{$unit} {
+    margin-top: #{$value} !important;
+  }
+
+  .mb-#{$unit} {
+    margin-bottom: #{$value} !important;
+  }
+
+  .ms-#{$unit} {
+    margin-left: #{$value} !important;
+  }
+
+  .me-#{$unit} {
+    margin-right: #{$value} !important;
+  }
+}

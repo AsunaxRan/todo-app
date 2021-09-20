@@ -1,0 +1,53 @@
+@import 'styles/variables.scss';
+
+.input {
+  box-sizing: border-box;
+  margin: 0;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  min-width: 0;
+  padding: 4px 11px;
+  color: $color-black;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  background-color: $color-white;
+  background-image: none;
+  border: 1px solid $color-gray-light;
+  border-radius: 2px;
+  transition: all 0.3s;
+
+  &::placeholder {
+    color: rgba($color-black, 0.65);
+  }
+
+  &:placeholder-shown {
+    text-overflow: ellipsis;
+  }
+
+  &:hover {
+    border-color: $color-blue;
+    border-right-width: 1px !important;
+  }
+
+  &:focus {
+    border-color: $color-blue;
+    box-shadow: 0 0 0 2px rgba($color-blue, 0.2);
+    outline: 0;
+    border-right-width: 1px !important;
+  }
+
+  &--invalid {
+    border-color: $color-red;
+
+    &:hover {
+      border-color: $color-red;
+    }
+
+    &:focus {
+      border-color: $color-red;
+      box-shadow: 0 0 0 2px rgba($color-red, 0.2);
+      outline: 0;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+@import 'styles/variables.scss';
+
+@mixin button-variant($key, $value) {
+  color: $color-white;
+  background-color: $value;
+
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.8;
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-white;
+    background-color: mix($color-white, $value, 20%);
+  }
+}
+
+.btn {
+  display: inline-block;
+  font-weight: $font-weight-normal;
+  line-height: $line-height-base;
+  color: $color-white;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: none;
+  padding: 5px 8px;
+  font-size: $font-size-base;
+  border-radius: 2px;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+  @each $color, $value in $theme-colors {
+    &--#{$color} {
+      @include button-variant($value, $value);
+    }
+  }
+}

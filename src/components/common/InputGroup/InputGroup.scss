@@ -1,0 +1,52 @@
+@import 'styles/variables.scss';
+
+.input-group {
+  display: inline-block;
+  width: 100%;
+  text-align: start;
+  vertical-align: top;
+
+  &__wrapper {
+    display: table;
+    position: relative;
+    border-collapse: separate;
+    width: 100%;
+  }
+
+  &__input {
+    float: left;
+    width: 100%;
+    margin-bottom: 0;
+    text-align: inherit;
+    display: table-cell;
+  }
+
+  &__addon {
+    position: relative;
+    padding: 0 11px;
+    color: rgba($color-black, 0.85);
+    font-weight: $font-weight-normal;
+    font-size: $font-size-base;
+    text-align: center;
+    background-color: $color-gray-light;
+    border: 1px solid $color-gray-light;
+    border-radius: 2px;
+    transition: all 0.3s;
+    display: table-cell;
+    width: 1px;
+    white-space: nowrap;
+    vertical-align: middle;
+
+    &:first-child {
+      border-right: 0;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    &:last-child {
+      border-left: 0;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+}

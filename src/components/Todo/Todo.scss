@@ -1,0 +1,45 @@
+@import 'styles/variables.scss';
+
+.todo {
+  transition: 0.3s box-shadow cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  &:hover {
+    box-shadow: 1px 3px 5px 0 rgba($color-black, 0.2);
+  }
+
+  &__main {
+    display: flex;
+    flex-wrap: nowrap;
+    border: 1px solid $color-gray;
+    padding: 10px 15px;
+    align-items: center;
+  }
+
+  &__checkbox,
+  &__actions {
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+
+  &__actions {
+    padding-left: 5px;
+
+    .btn:first-child {
+      margin-right: 10px;
+    }
+  }
+
+  &__content {
+    flex: 1;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &__detail {
+    border: 1px solid $color-gray;
+    border-top: none;
+    padding: 15px;
+  }
+}

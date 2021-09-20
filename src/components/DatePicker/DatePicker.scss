@@ -1,0 +1,10 @@
+.date-picker {
+  position: relative;
+
+  &__calendar-wrapper {
+    position: absolute;
+    z-index: 50;
+    top: calc(100% + 5px);
+    max-width: -webkit-fill-available;
+  }
+}

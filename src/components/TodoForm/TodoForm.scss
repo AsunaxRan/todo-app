@@ -1,0 +1,14 @@
+.todo-form {
+  @media screen and (min-width: 992px) {
+    &__group {
+      display: flex;
+      margin: 0 -10px;
+
+      & > * {
+        flex: 1 1 50%;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
+  }
+}
