@@ -5,6 +5,11 @@
     position: absolute;
     z-index: 50;
     top: calc(100% + 5px);
-    max-width: -webkit-fill-available;
+  }
+
+  @media screen and (max-width: 480px) {
+    &__calendar-wrapper {
+      max-width: -webkit-fill-available;
+    }
   }
 }

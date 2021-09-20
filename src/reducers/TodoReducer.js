@@ -11,14 +11,24 @@ import {
 
 const TodoReducer = (state, action) => {
   switch (action.type) {
-    case ADD_TODO:
-      return [
+    case ADD_TODO: {
+      let newArray = [
         {
           ...action.payload,
           id: nanoid(),
         },
         ...state,
       ];
+
+      newArray.sort((a, b) => {
+        let timeA = new Date(a);
+        let timeB = new Date(b);
+
+        return timeA.getTime() > timeB.getTime();
+      });
+
+      return newArray;
+    }
     case UPDATE_TODO:
       return state.map((item) =>
         item.id === action.payload.id ? action.payload : item,

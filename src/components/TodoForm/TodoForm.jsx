@@ -81,7 +81,7 @@ const TodoForm = (props) => {
           <Controller
             name="due_date"
             control={control}
-            defaultValue={dueDate}
+            defaultValue={new Date(dueDate)}
             render={({ field }) => {
               return <DatePicker {...field} minDate={new Date()} />;
             }}
