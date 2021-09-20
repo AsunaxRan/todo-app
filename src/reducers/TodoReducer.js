@@ -21,10 +21,7 @@ const TodoReducer = (state, action) => {
       ];
 
       newArray.sort((a, b) => {
-        let timeA = new Date(a);
-        let timeB = new Date(b);
-
-        return timeA.getTime() > timeB.getTime();
+        return new Date(a.dueDate) - new Date(b.dueDate);
       });
 
       return newArray;

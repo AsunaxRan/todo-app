@@ -79,7 +79,7 @@ const TodoForm = (props) => {
         <div className="mb-3">
           <div className="fw-bold">Due Date</div>
           <Controller
-            name="due_date"
+            name="dueDate"
             control={control}
             defaultValue={new Date(dueDate)}
             render={({ field }) => {
